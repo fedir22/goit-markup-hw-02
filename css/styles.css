@@ -3,13 +3,20 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --hover-color: #2196f3;
+  --background-color: #FFFFFF;
+  --hero-background: #2f303a;
+  --hero-color: #ffffff;
+  --button-hero-color: #ffffff;
+  --backround-button-hero: #2196f3;
+  --backround-button-hover: #188ce8;
+  --filter-button-backround: #f5f4fa;
+  --footer-backround: #2f303a;
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: var(--background-color)
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -20,9 +27,9 @@ ul {
 a {
   text-decoration: none;
 }
-button {
+/* button {
   font-family: inherit;
-}
+} */
 /* Хедер */
 .header {
   background-color: #ffffff;
@@ -68,32 +75,47 @@ button {
 }
 /* Секція Герой */
 .hero {
-  background-color: #2f303a;
+  background-color: var(--hero-background);
 }
 .hero-title {
-  color: #ffffff;
+  color: var(--hero-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 .button-hero {
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--button-hero-color);
+  background-color: var(--backround-button-hero);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
+  font-family: Roboto, sans-serif;
 }
 .button-hero:hover,
 .button-hero:focus {
-  background-color: #188ce8;
+  background-color: var(--backround-button-hover);
 }
 /* Секція Переваги */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .section-title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -129,7 +151,7 @@ button {
 }
 /* Секція Футер */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-backround)
 }
 .logo-footer {
   color: #ffffff;
@@ -166,8 +188,9 @@ button {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   cursor: pointer;
+  font-family: Roboto, sans-serif;
 
-  background-color: #f5f4fa;
+  background-color: var(--filter-button-backround)
   border-radius: 4px;
 }
 .filter .current {
